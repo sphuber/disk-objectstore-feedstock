@@ -1,5 +1,5 @@
 {% set name = "disk-objectstore" %}
-{% set version = "0.6.0" %}
+{% set version = "1.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name|replace('-','_') }}-{{ version }}.tar.gz
-  sha256: ad3404eff452eacb2cf3fcd25d45cfc933eb32b4fd69fba81f4c3cbda47b1777
+  sha256: a61e3a817e2552fc834a61aaba975708ab1342b3bee4d3bdd6e3fc69de5177db
 
 build:
   number: 0
@@ -19,12 +19,11 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.7
+    - python >=3.8
   run:
-    - python >=3.7
+    - python >=3.8
     - click
-    - sqlalchemy ~=1.4.22
-    - typing-extensions
+    - sqlalchemy >=1.4.22
 
 test:
   requires:
